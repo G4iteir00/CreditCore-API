@@ -2,7 +2,7 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
-import routes from "./routes/index.route.js";
+import routes from "./routes/index.router.js";
 import { options } from "./config/swagger.config.js";
 
 const app = express();
