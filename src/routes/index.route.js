@@ -1,3 +1,4 @@
+// index.route.js
 import express from "express";
 
 const routes = (app) => {
