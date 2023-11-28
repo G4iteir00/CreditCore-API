@@ -1,3 +1,5 @@
+import customerSwaggerSchema from "../schemas/customer/customer-swagger.schema.js";
+
 // Configuração do Swagger
 export const options = {
     definition: {
@@ -9,10 +11,19 @@ export const options = {
         },
         servers: [
             {
-                url: "http://localhost:3000",
+                // url: "http://localhost:3000",
+                url: "https://congenial-train-7vv9qgv45pqx3x74r-3000.app.github.dev/", // codespace
                 description: "Servidor de Desenvolvimento"
             }
         ],
+        components: {
+            schemas: {
+                Customer: {
+                    type: 'object',
+                    properties: customerSwaggerSchema
+                }
+            }
+        },
     },
     apis: ["./src/routes/*.js"],
 };
